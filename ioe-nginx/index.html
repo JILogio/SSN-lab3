@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Servidor IO</title>
+</head>
+<body>
+    <h1>Hola soy Ismael Ordonez Echeverria!</h1>
+    <h3>Practica 4 - Introduccion a Kubernetes</h3>
+    <p>Tu IP y puerto son: <span id="server-info"></span></p>
+
+    <script>
+        // Mostrar IP y puerto automáticamente del cliente
+        fetch('https://api.ipify.org?format=json')
+            .then(resp => resp.json())
+            .then(data => {
+                document.getElementById('server-info').innerText = data.ip + ":80";
+            });
+    </script>
+</body>
+</html>

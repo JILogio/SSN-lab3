@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ioedeploy
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: ioeserver
+  template:
+    metadata:
+      labels:
+        app: ioeserver
+        master: SSN
+    spec:
+      containers:
+      - name: ioeserver
+        image: ioeimage:v1
+        imagePullPolicy: IfNotPresent
+        ports:
+        - containerPort: 80
