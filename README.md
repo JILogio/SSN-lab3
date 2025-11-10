@@ -117,5 +117,3 @@ Lab3/
 │
 └── README.md
 ```
-
-Si quieres, puedo agregar un apartado final con **capturas de pantalla referenciadas** o un **diagrama de arquitectura** hecho en ASCII para el repo.
